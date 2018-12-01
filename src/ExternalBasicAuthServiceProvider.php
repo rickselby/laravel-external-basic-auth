@@ -9,7 +9,7 @@ class ExternalBasicAuthServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        Auth::extend('external', function($app, $name, array $config) {
+        Auth::extend('external', function ($app, $name, array $config) {
             return new ExternalBasicAuthGuard(
                 Auth::createUserProvider($config['provider']),
                 $app
