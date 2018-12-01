@@ -10,7 +10,7 @@ which in our case will not contain their password.
 
 |         | Laravel  | PHP  |
 |---------|----------|------|
-| **2.x** | 5.5+     | 7.0+ |
+| **1.x** | 5.5+     | 7.0+ |
 
 ## Usage
 
