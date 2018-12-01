@@ -1,0 +1,38 @@
+{
+  "name": "rickselby/laravel-external-basic-auth",
+  "description": "External Basic Auth for Laravel",
+  "keywords": ["laravel", "auth", "basic", "external"],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rick Selby",
+      "email": "rick@selby-family.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "laravel/framework": "5.5.*|5.6.*|5.7.*"
+  },
+  "require-dev": {
+    "graham-campbell/testbench": "4.*|5.*",
+    "phpunit/phpunit": "6.*|7.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "RickSelby\\Laravel\\Auth\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RickSelby\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RickSelby\\Laravel\\Auth\\ExternalBasicAuthServiceProvider"
+      ]
+    }
+  }
+}
