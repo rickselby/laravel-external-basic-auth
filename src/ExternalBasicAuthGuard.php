@@ -4,9 +4,9 @@ namespace RickSelby\Laravel\Auth;
 
 use Illuminate\Auth\GuardHelpers;
 use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Support\Facades\Config;
 
 class ExternalBasicAuthGuard implements Guard
 {
@@ -54,7 +54,7 @@ class ExternalBasicAuthGuard implements Guard
             $userID = $this->app->make(\Illuminate\Http\Request::class)->header($this->config['header']);
         }
 
-        if (!isset($this->config['field'])) {
+        if (! isset($this->config['field'])) {
             // No alternate field - the identifier is the ID
             $this->user = $this->provider->retrieveById($userID);
         } else {
@@ -69,7 +69,7 @@ class ExternalBasicAuthGuard implements Guard
     }
 
     /**
-     * Eager load relationships for the auth'd user
+     * Eager load relationships for the auth'd user.
      */
     protected function eagerLoadRelationships()
     {

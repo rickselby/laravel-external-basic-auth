@@ -2,13 +2,13 @@
 
 namespace RickSelby\Tests;
 
-use Illuminate\Contracts\Auth\UserProvider;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Config;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Contracts\Auth\UserProvider;
 use PHPUnit\Framework\MockObject\MockObject;
+use Illuminate\Contracts\Foundation\Application;
 use RickSelby\Laravel\Auth\ExternalBasicAuthGuard;
 
 class GuardTest extends TestCase
@@ -91,6 +91,7 @@ class GuardTest extends TestCase
 
         $this->getUser();
     }
+
     /**
      * @test
      * @dataProvider userProvider
@@ -172,5 +173,4 @@ class GuardTest extends TestCase
             ['abcdefghijklmnop'],
         ];
     }
-
 }
