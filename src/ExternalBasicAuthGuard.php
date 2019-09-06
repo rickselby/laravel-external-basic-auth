@@ -54,6 +54,10 @@ class ExternalBasicAuthGuard implements Guard
             $userID = $this->app->make(\Illuminate\Http\Request::class)->header($this->config['header']);
         }
 
+        if (isset($this->config['strip'])) {
+            $userID = preg_replace('/'.$this->config['strip'].'/', '', $userID);
+        }
+
         if (! isset($this->config['field'])) {
             // No alternate field - the identifier is the ID
             $this->user = $this->provider->retrieveById($userID);

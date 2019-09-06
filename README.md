@@ -73,3 +73,15 @@ Edit your `config/auth.php` file, and under the appropriate `guard`, add a `head
             'header' => 'X-forwarded-REMOTE_USER',
         ],
     ],
+
+## Stripping a string from the user identifier
+
+If your authentication field has a part you do not wish to use (e.g. user@domain.com), this can be stripped:
+
+    'guards' => [
+        'web' => [
+            'driver' => 'external',
+            'provider' => 'users',
+            'strip' => '@domain.com',
+        ],
+    ],

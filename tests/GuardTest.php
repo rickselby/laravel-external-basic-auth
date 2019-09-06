@@ -120,6 +120,19 @@ class GuardTest extends TestCase
     }
 
     /** @test */
+    public function user_retrieval_strips_stuff()
+    {
+        $username = 'bob';
+        $_SERVER['REMOTE_USER'] = $username.'STRIPTHIS';
+        Config::set('auth.guards.foo.strip', 'STRIPTHIS');
+
+        $this->application->method('environment')->willReturn(false);
+        $this->userProvider->expects($this->once())->method('retrieveById')->with($username)->willReturn(true);
+
+        $this->getUser();
+    }
+
+    /** @test */
     public function eager_load_is_called_if_required()
     {
         $_SERVER['REMOTE_USER'] = 'abc123';
