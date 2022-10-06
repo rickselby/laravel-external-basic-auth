@@ -19,7 +19,7 @@ class GuardTest extends TestCase
     /** @var MockObject|UserProvider */
     private $userProvider;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
