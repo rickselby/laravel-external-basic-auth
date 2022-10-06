@@ -34,5 +34,8 @@
         "RickSelby\\Laravel\\Auth\\ExternalBasicAuthServiceProvider"
       ]
     }
+  },
+  "config": {
+    "allow-plugins": false
   }
 }
