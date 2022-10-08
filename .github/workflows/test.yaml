@@ -17,9 +17,9 @@ jobs:
         laravel: [5.7.*, 5.8.*, 6.*]
         exclude:
           - php: 8.0
-            laravel: 7.3
+            laravel: 5.7.*
           - php: 8.0
-            laravel: 7.4
+            laravel: 5.8.*
     name: PHP ${{ matrix.php }} Laravel ${{ matrix.laravel }}
 
     steps:
