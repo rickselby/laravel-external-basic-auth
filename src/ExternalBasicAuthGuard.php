@@ -4,9 +4,9 @@ namespace RickSelby\Laravel\Auth;
 
 use Illuminate\Auth\GuardHelpers;
 use Illuminate\Contracts\Auth\Guard;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Support\Facades\Config;
 
 class ExternalBasicAuthGuard implements Guard
 {
@@ -86,6 +86,7 @@ class ExternalBasicAuthGuard implements Guard
      * Validate a user's credentials.
      *
      * @param  array  $credentials
+     *
      * @throws \Exception
      */
     public function validate(array $credentials = [])
