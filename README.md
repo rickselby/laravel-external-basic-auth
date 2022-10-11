@@ -1,16 +1,13 @@
 # Laravel External Basic Auth
 
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+![Packagist Version](https://img.shields.io/packagist/v/rickselby/laravel-external-basic-auth)
+
 This is a guard for Laravel that assumes the value in `$_SERVER['REMOTE_USER']`
 is the identifier for the currently logged in user.
 
 Laravel's built-in basic auth still auths the username and passwords against the `users` table,
 which in our case will not contain their password.
-
-## Versions
-
-|         | Laravel  | PHP  |
-|---------|----------|------|
-| **1.x** | 5.5+     | 7.0+ |
 
 ## Usage
 
@@ -29,7 +26,8 @@ driver to `external`; e.g.
 ## Alternate lookup field
 
 By default, the package will match the `$_SERVER['REMOTE_USER']` value against the `id` of the user model.
-If the `$_SERVER['REMOTE_USER']` value is in a different field (e.g. the user model has a standard auto-incrementable integer for an ID, and a separate `username` field)
+If the `$_SERVER['REMOTE_USER']` value is in a different field 
+(e.g. the user model has a standard auto-incrementable integer for an ID, and a separate `username` field)
 then the package can look up a user by this field instead.
 
 Edit your `config/auth.php` file, and under the appropriate `guard`, add a `field` setting:
