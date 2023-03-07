@@ -7,7 +7,7 @@ use RickSelby\Laravel\Auth\ExternalBasicAuthServiceProvider;
 
 abstract class AbstractTestCase extends AbstractPackageTestCase
 {
-    protected function getServiceProviderClass()
+    protected static function getServiceProviderClass(): string
     {
         return ExternalBasicAuthServiceProvider::class;
     }
