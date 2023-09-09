@@ -37,6 +37,7 @@ class GuardTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider userProvider
      */
     public function it_uses_remote_user_field_to_find_user($username)
@@ -51,6 +52,7 @@ class GuardTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider userProvider
      */
     public function it_uses_remote_user_if_local($username)
@@ -65,6 +67,7 @@ class GuardTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider userProvider
      */
     public function it_checks_environment_when_local($username)
@@ -79,6 +82,7 @@ class GuardTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider userProvider
      */
     public function environment_overrides_remote_user_when_local($username)
@@ -94,6 +98,7 @@ class GuardTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider userProvider
      */
     public function environment_ignored_when_not_local($username)
@@ -149,6 +154,7 @@ class GuardTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider userProvider
      */
     public function header_checked_if_required($user)
