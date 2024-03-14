@@ -182,7 +182,7 @@ class GuardTest extends TestCase
         putenv('TEST_USER');
     }
 
-    public function userProvider()
+    static public function userProvider()
     {
         return [
             ['test'],
