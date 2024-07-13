@@ -16,7 +16,7 @@
   },
   "require-dev": {
     "graham-campbell/testbench": "6.*",
-    "phpunit/phpunit": "10.*"
+    "phpunit/phpunit": "11.*"
   },
   "autoload": {
     "psr-4": {
